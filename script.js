@@ -1,35 +1,35 @@
 const rules = [
     {
         title: "Respect entre membre",
-        description: "Traite tout monde normalement arrete de faire le flocko ou le mec de l'info si t'y connais rien !"
+        description: "Traite tout monde normalement arrete de faire le flocko ou le mec de l'info si t'y connais rien !",
     },
     {
        title: "Harcelement",
-       description: "Arreté de faire les flockos a faire un groupe pour vous embrouille, regler vos embrouille tout seule !"
+       description: "Arreté de faire les flockos a faire un groupe pour vous embrouille, regler vos embrouille tout seule !",
     },
     {
-      title: "flood"
-      description: "eviter de flood bande d'enculer !"
+      title: "flood",
+      description: "eviter de flood bande d'enculer !",
 
     }, 
     {
-      title: "Pub"
-      description: "Faite aucune pub dans les salons commu venez mp @vcs07 pour pub"
+      title: "Pub",
+      description: "Faite aucune pub dans les salons commu venez mp @vcs07 pour pub",
 
     },
     {
-        title: "Ghor"
-        description: "Pour tout les truc ghor genre: vcam, decapitations ect ect sa evité serieusement :/"
+        title: "Ghor",
+        description: "Pour tout les truc ghor genre: vcam, decapitations ect ect sa evité serieusement :/",
 
     },
     {
-        title: "grabber"
-        description: "evité de lacher des liens grabber c'est trop gnt sah "
+        title: "grabber",
+        description: "evité de lacher des liens grabber c'est trop gnt sah ",
 
     },
     {
-        title: "Salon"
-        description: "juste eviter de parler dans des salon genre #mission pour parle de chose qui n'es pas une demande !"
+        title: "Salon",
+        description: "juste eviter de parler dans des salon genre #mission pour parle de chose qui n'es pas une demande !",
 
     }
 
