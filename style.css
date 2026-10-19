@@ -593,7 +593,7 @@ main,
 }
 
 .creator-voice {
-    top: 48%;
+    top: 40%;
     left: max(24px, calc((100% - 1200px) / 2));
     transform: rotate(-5deg);
 }
