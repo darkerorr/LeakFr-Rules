@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#08090b">
+        <meta name="description" content="Télécharge le tools leakfr">
+
+
+        <title> Télécharge le tools de leakfr by Voice</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <canvas id="particles" aria-hidden="true"></canvas>
+        
+        <header class="navbar glass">
+            <a class="brand" href="index.html" aria-label="Home Leakfr">
+            <span class="brand-icon">L</span>
+            <span>LEAK<span class="brand-light">FR</span></span>
+            </a>
+            
+            
+
+            <nav class="nav-links" aria-label="Nav principal">
+                <a href="index.html">Home</a>
+                <a href="tools.html">Tools</a>
+                <a href="download.html" aria-current="page">Téléchargement</a>
+                <a href="rules.html">rules</a>
+            </nav>
+         <a class="nav-button" href="https://github.com/darkerorr/LeakFr-Tools">
+            GitHub <span>↗</span>
+        </a>
+    </header>
+
+    <main class="page-shell">
+
+        <section class="page-hero">
+            <span class="page-kicker">LEAKFR / DOWNLOAD</span>
+
+            <h1 class="page-title">
+                Récupère le code.<br>
+                <span class="gradient-text">Lance les outils.</span>
+            </h1>
+
+            <p class="page-lead">
+                LeakFr-Tools est un projet Python. Télécharge son code source,
+                prépare ton environnement et installe les dépendances pour
+                démarrer l'application.
+            </p>
+
+            <div class="page-actions">
+                <a
+                    class="button-primary"
+                    href="https://github.com/darkerorr/LeakFr-Tools/archive/refs/heads/main.zip"
+                >
+                    Télécharger le code source (.zip) ↓
+                </a>
+
+                <a
+                    class="button-secondary"
+                    href="https://github.com/darkerorr/LeakFr-Tools"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Voir le dépôt ↗
+                </a>
+            </div>
+        </section>
+
+        <section class="download-notice glass">
+            <span class="notice-icon">i</span>
+
+            <div>
+                <h3>À propos du téléchargement</h3>
+                <p>
+                    Le lien ZIP récupère le code source de la branche principale.
+                    Il ne s'agit pas d'un installateur Windows .exe.
+                    Suis les instructions correspondant à ton système.
+                </p>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div class="section-label">01 / INSTALLATION</div>
+
+            <h2>
+                Choisis ton environnement.
+            </h2>
+
+            <p class="page-lead page-lead-left">
+                Les commandes ci-dessous installent le projet depuis son dépôt
+                GitHub. Chaque bloc est copiable.
+            </p>
+
+            <div class="install-list">
+
+                <article class="install-card glass">
+                    <div class="install-heading">
+                        <div>
+                            <span class="page-kicker">01 / DESKTOP</span>
+                            <h3>Windows · PowerShell</h3>
+                        </div>
+                        <span class="system-tag">Windows 10/11</span>
+                    </div>
+
+                    <p>
+                        Installe Python 3.9 ou supérieur et Git avant de commencer.
+                    </p>
+
+                    <div class="command-header">
+                        <span>COMMANDES</span>
+                        <button class="copy-button" data-copy-target="windows-install">
+                            Copier
+                        </button>
+                    </div>
+
+                    <pre><code id="windows-install">git clone https://github.com/darkerorr/LeakFr-Tools.git
+cd LeakFr-Tools
+py -3 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python main.py</code></pre>
+
+                    <p class="install-note">
+                        Si PowerShell bloque l'activation de l'environnement,
+                        exécute cette commande dans la fenêtre courante, puis
+                        recommence l'activation :
+                    </p>
+
+                    <pre><code id="powershell-policy">Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass</code></pre>
+
+                    <button class="copy-button" data-copy-target="powershell-policy">
+                        Copier la commande de correction
+                    </button>
+                </article>
+
+                <article class="install-card glass">
+                    <div class="install-heading">
+                        <div>
+                            <span class="page-kicker">02 / DESKTOP</span>
+                            <h3>Linux · Debian / Ubuntu</h3>
+                        </div>
+                        <span class="system-tag">Linux</span>
+                    </div>
+
+                    <div class="command-header">
+                        <span>COMMANDES</span>
+                        <button class="copy-button" data-copy-target="linux-install">
+                            Copier
+                        </button>
+                    </div>
+
+                    <pre><code id="linux-install">sudo apt update
+sudo apt install -y git python3 python3-venv python3-pip
+git clone https://github.com/darkerorr/LeakFr-Tools.git
+cd LeakFr-Tools
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python main.py</code></pre>
+                </article>
+
+                <article class="install-card glass">
+                    <div class="install-heading">
+                        <div>
+                            <span class="page-kicker">03 / DESKTOP</span>
+                            <h3>macOS</h3>
+                        </div>
+                        <span class="system-tag">Apple</span>
+                    </div>
+
+                    <p>
+                        Homebrew peut servir à installer Python et Git.
+                    </p>
+
+                    <div class="command-header">
+                        <span>COMMANDES</span>
+                        <button class="copy-button" data-copy-target="macos-install">
+                            Copier
+                        </button>
+                    </div>
+
+                    <pre><code id="macos-install">brew install python@3.12 git
+git clone https://github.com/darkerorr/LeakFr-Tools.git
+cd LeakFr-Tools
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python main.py</code></pre>
+                </article>
+
+                <article class="install-card glass">
+                    <div class="install-heading">
+                        <div>
+                            <span class="page-kicker">04 / MOBILE</span>
+                            <h3>Android · Termux</h3>
+                        </div>
+                        <span class="system-tag">Android</span>
+                    </div>
+
+                    <div class="command-header">
+                        <span>COMMANDES</span>
+                        <button class="copy-button" data-copy-target="termux-install">
+                            Copier
+                        </button>
+                    </div>
+
+                    <pre><code id="termux-install">pkg update && pkg upgrade -y
+pkg install -y git python clang libjpeg-turbo libpng freetype
+git clone https://github.com/darkerorr/LeakFr-Tools.git
+cd LeakFr-Tools
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python main.py</code></pre>
+
+                    <p class="install-note">
+                        Certaines fonctions optionnelles, dépendances natives ou
+                        commandes système peuvent nécessiter une configuration
+                        supplémentaire sous Termux.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="download-banner glass">
+            <span class="page-kicker">SOURCE OFFICIELLE</span>
+
+            <h2>Besoin de vérifier le projet ?</h2>
+
+            <p>
+                Consulte le code, les dépendances, la documentation et les
+                instructions maintenues directement dans le dépôt.
+            </p>
+
+            <div class="page-actions">
+                <a
+                    class="button-primary"
+                    href="https://github.com/darkerorr/LeakFr-Tools"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Ouvrir GitHub ↗
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <a class="brand" href="index.html">
+            <span class="brand-icon">L</span>
+            <span>LEAK<span class="brand-light">FR</span></span>
+        </a>
+
+        <p>La communauté et les projets LEAKFR.</p>
+        <span class="copyright">© 2026 LEAKFR</span>
+    </footer>
+</body>
+</html>

@@ -30,26 +30,28 @@ const rules = [
     }
 ];
 
+
 const grid = document.querySelector("#rules-grid");
 
-rules.forEach((rule, i) => {
-    const card = document.createElement("article");
-    card.className = "rule-card";
+if (grid) {
+    rules.forEach((rule, i) => {
+        const card = document.createElement("article");
+        card.className = "rule-card";
 
-    const number = document.createElement("span");
-    number.className = "rule-number";
-    number.textContent = `REGLE ${String(i + 1).padStart(2, "0")}`;
+        const number = document.createElement("span");
+        number.className = "rule-number";
+        number.textContent = `RÈGLE ${String(i + 1).padStart(2, "0")}`;
 
-    const title = document.createElement("h3");
-    title.textContent = rule.title;
+        const title = document.createElement("h3");
+        title.textContent = rule.title;
 
-    const desc = document.createElement("p");
-    desc.textContent = rule.description;
+        const desc = document.createElement("p");
+        desc.textContent = rule.description;
 
-    card.append(number, title, desc);
-    grid.appendChild(card);
-});
-
+        card.append(number, title, desc);
+        grid.appendChild(card);
+    });
+}
 const canvas = document.querySelector("#particles");
 const ctx = canvas?.getContext("2d");
 
@@ -133,3 +135,32 @@ window.addEventListener("resize", () => {
 });
 
 reduceMotion.addEventListener("change", start);
+
+
+document.querySelectorAll("[data-copy-target]").forEach(button => {
+    button.addEventListener("click", async () => {
+        const targetId = button.getAttribute("data-copy-target");
+        const target = document.getElementById(targetId);
+
+        if (!target) return;
+
+        const originalText = button.textContent;
+
+        try {
+            await navigator.clipboard.writeText(target.textContent.trim());
+
+            button.textContent = "Copié ✓";
+
+            window.setTimeout(() => {
+                button.textContent = originalText;
+            }, 1800);
+        } catch (error) {
+            console.error("Impossible de copier cette commande :", error);
+            button.textContent = "Copie impossible";
+
+            window.setTimeout(() => {
+                button.textContent = originalText;
+            }, 1800);
+        }
+    });
+});
